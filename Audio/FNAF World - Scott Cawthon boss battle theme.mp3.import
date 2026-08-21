@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0k237nsr5avl"
+path="res://.godot/imported/FNAF World - Scott Cawthon boss battle theme.mp3-16005f03ce7e51cf7bca02e1c9233b16.mp3str"
+
+[deps]
+
+source_file="res://Audio/FNAF World - Scott Cawthon boss battle theme.mp3"
+dest_files=["res://.godot/imported/FNAF World - Scott Cawthon boss battle theme.mp3-16005f03ce7e51cf7bca02e1c9233b16.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

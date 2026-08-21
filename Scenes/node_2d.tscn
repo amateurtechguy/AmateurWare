@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://wra2pfxbxwtf"]
+
+[ext_resource type="Texture2D" uid="uid://bxyg0ep4l3th" path="res://Pictures/background.png" id="1_j2wod"]
+[ext_resource type="Script" uid="uid://bx4f87qjyqhjn" path="res://Scenes/node_2d.gd" id="1_u7krg"]
+[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Font/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="2_6whob"]
+[ext_resource type="FontFile" uid="uid://bpjb5tgw4y1is" path="res://Font/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="3_u7krg"]
+[ext_resource type="AudioStream" uid="uid://d4i7kpd0cukvk" path="res://Audio/FNaF World OST - Title Screen Theme.mp3" id="4_tx0tn"]
+
+[node name="Home" type="Node2D" unique_id=1749909301]
+script = ExtResource("1_u7krg")
+
+[node name="Background" type="TextureRect" parent="." unique_id=998405969]
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_j2wod")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1890605287]
+clip_contents = false
+offset_left = 215.0
+offset_top = 56.0
+offset_right = 998.0
+offset_bottom = 218.0
+theme_override_constants/outline_size = 25
+theme_override_fonts/normal_font = ExtResource("2_6whob")
+theme_override_font_sizes/normal_font_size = 120
+text = "AmateurWare"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1338403381]
+offset_left = 257.0
+offset_top = 241.0
+offset_right = 932.0
+offset_bottom = 548.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=2051347388]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_u7krg")
+theme_override_font_sizes/font_size = 50
+text = "START
+"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=244775261]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_u7krg")
+theme_override_font_sizes/font_size = 50
+text = "SETTINGS
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=561343857]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_u7krg")
+theme_override_font_sizes/font_size = 50
+text = "QUIT
+
+"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=718816505]
+stream = ExtResource("4_tx0tn")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
