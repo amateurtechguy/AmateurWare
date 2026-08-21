@@ -17,8 +17,8 @@ You simply just click [here], wait for the assets to load, and you can play it l
   
 ## Credits: 
 
-[The stardance guide!](https://stardance.hackclub.com/missions/wario-ware/guide)
-
+- [The stardance guide!](https://stardance.hackclub.com/missions/wario-ware/guide)
+- Music: [fnaf world OST](https://youtu.be/whKvPRGhjnA?si=WokzHMEu-nO7iaLc) & [fnaf sister location OST](https://youtu.be/BuvXJKNO-MU?si=JivYBqz-8EjUQRTr)
 ---
 ## Creator:
 Made by the amateur tech guy:D
