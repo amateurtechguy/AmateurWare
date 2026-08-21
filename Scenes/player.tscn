@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cuu1ly8wt3hc2"]
+
+[ext_resource type="Script" uid="uid://bllub8y76kv11" path="res://Scenes/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://cveunj2f2man6" path="res://Pictures/783-7837218_student-pixel-character-2d-png-transparent-png-removebg-preview.png" id="2_6t5aa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x3xjb"]
+
+[node name="Player" type="CharacterBody2D" unique_id=743545738]
+script = ExtResource("1_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=884063228]
+position = Vector2(2.3841858e-07, 0.5000009)
+scale = Vector2(0.039782997, 0.046563193)
+texture = ExtResource("2_6t5aa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2026727069]
+shape = SubResource("CircleShape2D_x3xjb")

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b6aony3cru8dr"]
+
+[ext_resource type="Texture2D" uid="uid://byqeefd5nx16n" path="res://Pictures/Free-Nature-Backgrounds-Pixel-Art5.png" id="1_enoba"]
+[ext_resource type="AudioStream" uid="uid://c6irhnef76m42" path="res://Audio/gameplay music.mp3" id="2_11mgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3xjb"]
+size = Vector2(1170.5, 100.5)
+
+[node name="Minigame_1" type="Node2D" unique_id=274319120]
+
+[node name="Background" type="TextureRect" parent="." unique_id=2074162641]
+offset_left = -41.0
+offset_top = -96.0
+offset_right = 1197.0
+offset_bottom = 717.0
+texture = ExtResource("1_enoba")
+expand_mode = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=253627437]
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1360086954]
+offset_left = -7.0
+offset_top = 559.0
+offset_right = 1175.0
+offset_bottom = 689.0
+color = Color(0.081075795, 0.24300423, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1786295969]
+position = Vector2(581, 612)
+shape = SubResource("RectangleShape2D_x3xjb")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1199650624]
+stream = ExtResource("2_11mgy")
+autoplay = true
+parameters/looping = true

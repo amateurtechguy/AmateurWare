@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://baut0our0m614"]
 
 [ext_resource type="Script" uid="uid://cs6op158aqdwu" path="res://Scenes/Timer_screen.gd" id="1_2fcgv"]
-[ext_resource type="Texture2D" path="res://Pictures/kudz_k7u4_210409.jpg" id="1_c7xwe"]
+[ext_resource type="Texture2D" uid="uid://7ic6rnvyishd" path="res://Pictures/Screenshot 2026-08-21 173720.png" id="2_2fcgv"]
 [ext_resource type="Texture2D" uid="uid://bnrvnewg4vq0o" path="res://Pictures/heart.png" id="2_cn3xy"]
 [ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Font/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="3_2fcgv"]
 
@@ -13,7 +13,7 @@ offset_left = 1.0
 offset_top = -1.0
 offset_right = 1191.0
 offset_bottom = 655.0
-texture = ExtResource("1_c7xwe")
+texture = ExtResource("2_2fcgv")
 expand_mode = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1899699781]
@@ -48,21 +48,27 @@ texture = ExtResource("2_cn3xy")
 expand_mode = 2
 
 [node name="Level" type="RichTextLabel" parent="." unique_id=1291356775]
-offset_left = 301.0
-offset_top = 303.0
-offset_right = 841.0
-offset_bottom = 424.0
+offset_left = 427.0
+offset_top = 308.0
+offset_right = 763.0
+offset_bottom = 429.0
 theme_override_constants/outline_size = 20
 theme_override_fonts/normal_font = ExtResource("3_2fcgv")
 theme_override_font_sizes/normal_font_size = 90
-text = "    Level #"
+text = "Level #"
+fit_content = true
+horizontal_alignment = 1
 
 [node name="Timer" type="RichTextLabel" parent="." unique_id=6542526]
-offset_left = 238.0
-offset_top = 545.0
-offset_right = 840.0
-offset_bottom = 640.0
+offset_left = 470.0
+offset_top = 533.0
+offset_right = 675.0
+offset_bottom = 628.0
 theme_override_constants/outline_size = 20
 theme_override_fonts/normal_font = ExtResource("3_2fcgv")
 theme_override_font_sizes/normal_font_size = 80
-text = "          0.0"
+text = " 0.0"
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1169383839]
