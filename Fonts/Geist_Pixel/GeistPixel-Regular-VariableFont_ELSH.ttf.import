@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cxhbtavk1vc3y"
-path="res://.godot/imported/PixelifySans-SemiBold.ttf-14c34a35dd7662fa5ee12befda6ec3da.fontdata"
+uid="uid://bklxvrj84djao"
+path="res://.godot/imported/GeistPixel-Regular-VariableFont_ELSH.ttf-426633da008e79d0b07c0f7bb9156701.fontdata"
 
 [deps]
 
-source_file="res://Font/Pixelify_Sans/static/PixelifySans-SemiBold.ttf"
-dest_files=["res://.godot/imported/PixelifySans-SemiBold.ttf-14c34a35dd7662fa5ee12befda6ec3da.fontdata"]
+source_file="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf"
+dest_files=["res://.godot/imported/GeistPixel-Regular-VariableFont_ELSH.ttf-426633da008e79d0b07c0f7bb9156701.fontdata"]
 
 [params]
 

@@ -3,16 +3,17 @@
 [ext_resource type="Script" uid="uid://bllub8y76kv11" path="res://Scenes/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://cveunj2f2man6" path="res://Pictures/783-7837218_student-pixel-character-2d-png-transparent-png-removebg-preview.png" id="2_6t5aa"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_x3xjb"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6tb2"]
+size = Vector2(67.25, 150.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=743545738]
 script = ExtResource("1_cvnsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=884063228]
-position = Vector2(0, 1)
-scale = Vector2(0.045207955, 0.046563193)
+position = Vector2(4.000002, 3.5)
+scale = Vector2(0.32911393, 0.37915748)
 texture = ExtResource("2_6t5aa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2026727069]
-position = Vector2(0, 1)
-shape = SubResource("CircleShape2D_x3xjb")
+position = Vector2(3.625, 3.25)
+shape = SubResource("RectangleShape2D_f6tb2")
