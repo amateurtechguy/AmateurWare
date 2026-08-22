@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://b6aony3cru8dr"]
 
 [ext_resource type="Texture2D" uid="uid://byqeefd5nx16n" path="res://Pictures/Free-Nature-Backgrounds-Pixel-Art5.png" id="1_enoba"]
+[ext_resource type="Script" uid="uid://djw2jpx82ck3b" path="res://Scenes/minigame_1.gd" id="1_jmcek"]
 [ext_resource type="AudioStream" uid="uid://c6irhnef76m42" path="res://Audio/gameplay music.mp3" id="2_11mgy"]
 [ext_resource type="PackedScene" uid="uid://cuu1ly8wt3hc2" path="res://Scenes/player.tscn" id="3_f6tb2"]
+[ext_resource type="Script" uid="uid://cpsntwc4xw54g" path="res://Scenes/stardust.gd" id="4_5txvl"]
 [ext_resource type="Texture2D" uid="uid://pfit4w74ucvs" path="res://Pictures/stardust.png" id="4_o6yob"]
+[ext_resource type="Script" uid="uid://sp7kkvd7k1ok" path="res://Scenes/stardust_2.gd" id="6_ojqsy"]
+[ext_resource type="Script" uid="uid://cm8lkxwfmshd0" path="res://Scenes/stardust_3.gd" id="7_jmcek"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3xjb"]
 size = Vector2(1191.25, 129.25)
@@ -136,6 +140,7 @@ _data = {
 radius = 35.22836
 
 [node name="Minigame_1" type="Node2D" unique_id=274319120]
+script = ExtResource("1_jmcek")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2074162641]
 offset_left = -30.0
@@ -232,6 +237,7 @@ parameters/looping = true
 position = Vector2(45, 479)
 
 [node name="Stardust" type="Node2D" parent="." unique_id=2034393485]
+script = ExtResource("4_5txvl")
 
 [node name="garlic" type="TextureRect" parent="Stardust" unique_id=769223631]
 offset_left = 578.0
@@ -254,6 +260,7 @@ position = Vector2(1.371582, 3.5649414)
 shape = SubResource("CircleShape2D_x3xjb")
 
 [node name="Stardust2" type="Node2D" parent="." unique_id=497232085]
+script = ExtResource("6_ojqsy")
 
 [node name="garlic" type="TextureRect" parent="Stardust2" unique_id=107441914]
 offset_left = 578.0
@@ -272,10 +279,11 @@ speed_scale = -1.0
 position = Vector2(625, 381)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stardust2/Area2D" unique_id=33756733]
-position = Vector2(2, -5)
+position = Vector2(2, 2)
 shape = SubResource("CircleShape2D_phon6")
 
 [node name="Stardust3" type="Node2D" parent="." unique_id=1589805646]
+script = ExtResource("7_jmcek")
 
 [node name="garlic" type="TextureRect" parent="Stardust3" unique_id=1723156969]
 offset_left = 899.1102
@@ -294,3 +302,6 @@ autoplay = &"floating3"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stardust3/Area2D" unique_id=387216825]
 position = Vector2(948, 183)
 shape = SubResource("CircleShape2D_dtpsr")
+
+[connection signal="garlic_collected" from="Stardust" to="Stardust2" method="_on_stardust_garlic_collected"]
+[connection signal="garlic_collected" from="Stardust" to="Stardust3" method="_on_stardust_garlic_collected"]
