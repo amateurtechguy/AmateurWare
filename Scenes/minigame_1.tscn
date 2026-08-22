@@ -4,10 +4,13 @@
 [ext_resource type="Script" uid="uid://djw2jpx82ck3b" path="res://Scenes/minigame_1.gd" id="1_jmcek"]
 [ext_resource type="AudioStream" uid="uid://c6irhnef76m42" path="res://Audio/gameplay music.mp3" id="2_11mgy"]
 [ext_resource type="PackedScene" uid="uid://cuu1ly8wt3hc2" path="res://Scenes/player.tscn" id="3_f6tb2"]
+[ext_resource type="Texture2D" uid="uid://br35qju8h4fwr" path="res://Pictures/1000_F_763711797_jEzIq46dVANc3pwMErZzVMIlNENzfiP9.jpg" id="3_vj06g"]
 [ext_resource type="Script" uid="uid://cpsntwc4xw54g" path="res://Scenes/stardust.gd" id="4_5txvl"]
 [ext_resource type="Texture2D" uid="uid://pfit4w74ucvs" path="res://Pictures/stardust.png" id="4_o6yob"]
+[ext_resource type="Texture2D" uid="uid://3xjaslje7lc4" path="res://Pictures/skinny brick.png" id="4_vj06g"]
 [ext_resource type="Script" uid="uid://sp7kkvd7k1ok" path="res://Scenes/stardust_2.gd" id="6_ojqsy"]
 [ext_resource type="Script" uid="uid://cm8lkxwfmshd0" path="res://Scenes/stardust_3.gd" id="7_jmcek"]
+[ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="9_ne1wf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3xjb"]
 size = Vector2(1191.25, 129.25)
@@ -152,12 +155,29 @@ expand_mode = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=253627437]
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=1360086954]
-offset_left = -7.0
-offset_top = 559.0
-offset_right = 1175.0
-offset_bottom = 689.0
-color = Color(0.081075795, 0.24300423, 0, 1)
+[node name="brick" type="TextureRect" parent="StaticBody2D" unique_id=329443921]
+offset_left = -13.0
+offset_top = 567.0
+offset_right = 535.0
+offset_bottom = 772.0
+texture = ExtResource("3_vj06g")
+expand_mode = 1
+
+[node name="brick2" type="TextureRect" parent="StaticBody2D" unique_id=928444536]
+offset_left = 535.0
+offset_top = 567.0
+offset_right = 1083.0
+offset_bottom = 772.0
+texture = ExtResource("3_vj06g")
+expand_mode = 1
+
+[node name="brick3" type="TextureRect" parent="StaticBody2D" unique_id=1568370317]
+offset_left = 1083.0
+offset_top = 567.0
+offset_right = 1631.0
+offset_bottom = 772.0
+texture = ExtResource("3_vj06g")
+expand_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1786295969]
 position = Vector2(589, 627.625)
@@ -199,17 +219,18 @@ offset_bottom = 777.0
 color = Color(0.081075795, 0.24300423, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border2" unique_id=539239401]
-position = Vector2(1539, 347)
+position = Vector2(1538, 347)
 shape = SubResource("RectangleShape2D_5txvl")
 
 [node name="platform1" type="StaticBody2D" parent="." unique_id=1760081591]
 
-[node name="ColorRect" type="ColorRect" parent="platform1" unique_id=1290652971]
-offset_left = 244.0
-offset_top = 430.0
-offset_right = 893.0
-offset_bottom = 464.0
-color = Color(0.081075795, 0.24300423, 0, 1)
+[node name="TextureRect" type="TextureRect" parent="platform1" unique_id=128041029]
+offset_left = 246.0
+offset_top = 431.25134
+offset_right = 895.0
+offset_bottom = 465.0
+texture = ExtResource("4_vj06g")
+expand_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform1" unique_id=224722662]
 position = Vector2(569, 448)
@@ -217,12 +238,13 @@ shape = SubResource("RectangleShape2D_f6tb2")
 
 [node name="platform2" type="StaticBody2D" parent="." unique_id=576249136]
 
-[node name="ColorRect" type="ColorRect" parent="platform2" unique_id=1561781737]
-offset_left = 432.0
-offset_top = 227.0
-offset_right = 1081.0
-offset_bottom = 261.0
-color = Color(0.081075795, 0.24300423, 0, 1)
+[node name="TextureRect" type="TextureRect" parent="platform2" unique_id=2099349426]
+offset_left = 433.0
+offset_top = 232.0
+offset_right = 1087.0
+offset_bottom = 265.0
+texture = ExtResource("4_vj06g")
+expand_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform2" unique_id=863685041]
 position = Vector2(760, 248)
@@ -302,6 +324,8 @@ autoplay = &"floating3"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stardust3/Area2D" unique_id=387216825]
 position = Vector2(948, 183)
 shape = SubResource("CircleShape2D_dtpsr")
+
+[node name="ThemedTimer" parent="." unique_id=1082965783 instance=ExtResource("9_ne1wf")]
 
 [connection signal="garlic_collected" from="Stardust" to="Stardust2" method="_on_stardust_garlic_collected"]
 [connection signal="garlic_collected" from="Stardust" to="Stardust3" method="_on_stardust_garlic_collected"]

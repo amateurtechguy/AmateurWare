@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ci4wh75dswh7u"]
+
+[ext_resource type="Texture2D" uid="uid://ostel234vg2s" path="res://Pictures/space-background.jpg" id="1_psbsm"]
+
+[node name="minigame_2" type="Node2D" unique_id=1469917394]
+
+[node name="scrollingbackground" type="Parallax2D" parent="." unique_id=1581832789]
+repeat_size = Vector2(1500, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="scrollingbackground" unique_id=1170002212]
+offset_right = 1746.0
+offset_bottom = 650.0
+texture = ExtResource("1_psbsm")
+expand_mode = 1

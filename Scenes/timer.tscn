@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://i002358fcf1s"]
 
-[ext_resource type="Script" uid="uid://cegk7hu0ky01f" path="res://Timer.gd" id="1_pvhx5"]
+[ext_resource type="Script" uid="uid://cegk7hu0ky01f" path="res://Script/Timer.gd" id="1_pvhx5"]
+[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="2_ycw00"]
 
 [node name="Timer" type="Node2D" unique_id=1082965783]
 script = ExtResource("1_pvhx5")
 
 [node name="timer" type="RichTextLabel" parent="." unique_id=36144191]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 523.0
+offset_bottom = 128.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("2_ycw00")
+theme_override_font_sizes/normal_font_size = 50
+fit_content = true

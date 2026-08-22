@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cs6op158aqdwu" path="res://Scenes/Timer_screen.gd" id="1_2fcgv"]
 [ext_resource type="Texture2D" uid="uid://7ic6rnvyishd" path="res://Pictures/Screenshot 2026-08-21 173720.png" id="2_2fcgv"]
 [ext_resource type="Texture2D" uid="uid://bnrvnewg4vq0o" path="res://Pictures/heart.png" id="2_cn3xy"]
-[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Font/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="3_2fcgv"]
+[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="3_2fcgv"]
 
 [node name="level_scene" type="Node2D" unique_id=118135783]
 script = ExtResource("1_2fcgv")
@@ -16,33 +16,33 @@ offset_bottom = 655.0
 texture = ExtResource("2_2fcgv")
 expand_mode = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1899699781]
+[node name="GarlicContainer" type="HBoxContainer" parent="." unique_id=1899699781]
 offset_left = 233.0
 offset_top = 105.0
 offset_right = 941.0
 offset_bottom = 242.0
 
-[node name="garlic" type="TextureRect" parent="HBoxContainer" unique_id=1103473393]
+[node name="garlic" type="TextureRect" parent="GarlicContainer" unique_id=1103473393]
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 expand_mode = 2
 
-[node name="garlic_2" type="TextureRect" parent="HBoxContainer" unique_id=274926989]
+[node name="garlic_2" type="TextureRect" parent="GarlicContainer" unique_id=274926989]
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 expand_mode = 2
 
-[node name="garlic_3" type="TextureRect" parent="HBoxContainer" unique_id=1754498963]
+[node name="garlic_3" type="TextureRect" parent="GarlicContainer" unique_id=1754498963]
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 expand_mode = 2
 
-[node name="garlic_4" type="TextureRect" parent="HBoxContainer" unique_id=1728680098]
+[node name="garlic_4" type="TextureRect" parent="GarlicContainer" unique_id=1728680098]
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 expand_mode = 2
 
-[node name="garlic_5" type="TextureRect" parent="HBoxContainer" unique_id=1728151863]
+[node name="garlic_5" type="TextureRect" parent="GarlicContainer" unique_id=1728151863]
 layout_mode = 2
 texture = ExtResource("2_cn3xy")
 expand_mode = 2

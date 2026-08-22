@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bxyg0ep4l3th" path="res://Pictures/background.png" id="1_j2wod"]
 [ext_resource type="Script" uid="uid://bx4f87qjyqhjn" path="res://Scenes/node_2d.gd" id="1_u7krg"]
-[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Font/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="2_6whob"]
+[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="2_6whob"]
 [ext_resource type="Texture2D" uid="uid://b1wxsqobshmti" path="res://Pictures/peek.png" id="3_tx0tn"]
-[ext_resource type="FontFile" uid="uid://bpjb5tgw4y1is" path="res://Font/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="3_u7krg"]
+[ext_resource type="FontFile" uid="uid://bpjb5tgw4y1is" path="res://Fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="3_u7krg"]
 [ext_resource type="AudioStream" uid="uid://d4i7kpd0cukvk" path="res://Audio/FNaF World OST - Title Screen Theme.mp3" id="4_tx0tn"]
 
 [node name="Home" type="Node2D" unique_id=1749909301]
