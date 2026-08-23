@@ -327,5 +327,6 @@ shape = SubResource("CircleShape2D_dtpsr")
 
 [node name="ThemedTimer" parent="." unique_id=1082965783 instance=ExtResource("9_ne1wf")]
 
-[connection signal="garlic_collected" from="Stardust" to="Stardust2" method="_on_stardust_garlic_collected"]
-[connection signal="garlic_collected" from="Stardust" to="Stardust3" method="_on_stardust_garlic_collected"]
+[connection signal="garlic_collected" from="Stardust" to="." method="_on_stardust_garlic_collected"]
+[connection signal="garlic_collected" from="Stardust2" to="." method="_on_stardust_2_garlic_collected"]
+[connection signal="garlic_collected" from="Stardust3" to="." method="_on_stardust_3_garlic_collected"]
