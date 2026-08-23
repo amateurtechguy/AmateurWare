@@ -1,15 +1,62 @@
 [gd_scene format=3 uid="uid://ci4wh75dswh7u"]
 
 [ext_resource type="Texture2D" uid="uid://ostel234vg2s" path="res://Pictures/space-background.jpg" id="1_psbsm"]
+[ext_resource type="Script" uid="uid://sbatq4fc4xjv" path="res://Scenes/minigame_2.gd" id="1_wu6l1"]
+[ext_resource type="Texture2D" uid="uid://pfit4w74ucvs" path="res://Pictures/stardust.png" id="2_dfb65"]
+[ext_resource type="Script" uid="uid://dvkap0e6mm2s" path="res://Scenes/button_1.gd" id="3_rfxq2"]
+[ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="4_mmgun"]
+[ext_resource type="Script" uid="uid://bo41hn42lku1v" path="res://Scenes/button_2.gd" id="4_rfxq2"]
+[ext_resource type="Script" uid="uid://bq5d22sm4mctn" path="res://Scenes/button_3.gd" id="5_mmgun"]
+[ext_resource type="Script" uid="uid://cq4cnhgf65v7v" path="res://Scenes/button_4.gd" id="6_h684j"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wu6l1"]
+load_path = "res://.godot/imported/stardust.png-f04a1f3bac265ea8787dc0045910cf72.ctex"
 
 [node name="minigame_2" type="Node2D" unique_id=1469917394]
+script = ExtResource("1_wu6l1")
 
-[node name="scrollingbackground" type="Parallax2D" parent="." unique_id=1581832789]
-repeat_size = Vector2(1500, 0)
-autoscroll = Vector2(100, 0)
-
-[node name="Background" type="TextureRect" parent="scrollingbackground" unique_id=1170002212]
-offset_right = 1746.0
-offset_bottom = 650.0
+[node name="Background" type="TextureRect" parent="." unique_id=1170002212]
+offset_right = 1167.0
+offset_bottom = 652.0
 texture = ExtResource("1_psbsm")
 expand_mode = 1
+
+[node name="Button_1" type="TextureButton" parent="." unique_id=122592671]
+offset_left = 192.33174
+offset_top = 217.28308
+offset_right = 232.33174
+offset_bottom = 257.28308
+action_mode = 0
+texture_normal = SubResource("CompressedTexture2D_wu6l1")
+script = ExtResource("3_rfxq2")
+
+[node name="Button_2" type="TextureButton" parent="." unique_id=1094280229]
+offset_left = 750.0
+offset_top = 360.0
+offset_right = 872.0
+offset_bottom = 487.0
+texture_normal = ExtResource("2_dfb65")
+script = ExtResource("4_rfxq2")
+
+[node name="Button_3" type="TextureButton" parent="." unique_id=1757265678]
+offset_left = 510.0
+offset_top = 164.0
+offset_right = 632.0
+offset_bottom = 291.0
+texture_normal = ExtResource("2_dfb65")
+script = ExtResource("5_mmgun")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=2042054849]
+offset_left = 369.0
+offset_top = 394.0
+offset_right = 491.0
+offset_bottom = 521.0
+texture_normal = ExtResource("2_dfb65")
+script = ExtResource("6_h684j")
+
+[node name="ThemedTimer" parent="." unique_id=1082965783 instance=ExtResource("4_mmgun")]
+
+[connection signal="pressed" from="Button_1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button_2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button_3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button_4" to="." method="_on_button_4_pressed"]

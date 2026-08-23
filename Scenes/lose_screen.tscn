@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://mdglf7djyocc"]
+
+[ext_resource type="Script" uid="uid://bx4gqr5gv5yq8" path="res://lose_screen.gd" id="1_nk27f"]
+[ext_resource type="Texture2D" uid="uid://bwhjbn6wv8oye" path="res://Pictures/lose-animation.png" id="2_38ql5"]
+[ext_resource type="AudioStream" uid="uid://u5hvc1qqq63c" path="res://Audio/Lose Sound Effect.mp3" id="3_ak4yb"]
+[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="4_1oqbe"]
+
+[node name="lose_screen" type="Node2D" unique_id=1299970198]
+script = ExtResource("1_nk27f")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=283743582]
+offset_right = 1154.0
+offset_bottom = 646.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=1301995640]
+layout_mode = 0
+offset_left = -69.0
+offset_top = 241.0
+offset_right = 479.0
+offset_bottom = 696.0
+texture = ExtResource("2_38ql5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1661007583]
+stream = ExtResource("3_ak4yb")
+autoplay = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2028503432]
+offset_left = 539.0
+offset_top = 104.0
+offset_right = 1018.0
+offset_bottom = 231.49997
+theme_override_fonts/normal_font = ExtResource("4_1oqbe")
+theme_override_font_sizes/normal_font_size = 100
+text = "You lost:("
+scroll_active = false
+
+[node name="Button" type="Button" parent="." unique_id=9311470]
+offset_left = 444.0
+offset_top = 306.0
+offset_right = 1105.0
+offset_bottom = 445.0
+theme_override_fonts/font = ExtResource("4_1oqbe")
+theme_override_font_sizes/font_size = 100
+action_mode = 0
+text = "Back to lobby"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
