@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="9_ne1wf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3xjb"]
-size = Vector2(1191.25, 129.25)
+size = Vector2(1191.25, 125.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5txvl"]
 size = Vector2(757.625, 885)
@@ -180,7 +180,7 @@ texture = ExtResource("3_vj06g")
 expand_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1786295969]
-position = Vector2(589, 627.625)
+position = Vector2(589, 629.625)
 shape = SubResource("RectangleShape2D_x3xjb")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=940197681]
@@ -256,7 +256,7 @@ autoplay = true
 parameters/looping = true
 
 [node name="Player" parent="." unique_id=743545738 instance=ExtResource("3_f6tb2")]
-position = Vector2(45, 479)
+position = Vector2(51, 492)
 
 [node name="Stardust" type="Node2D" parent="." unique_id=2034393485]
 script = ExtResource("4_5txvl")
