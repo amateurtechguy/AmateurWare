@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://ci4wh75dswh7u"]
 
 [ext_resource type="Texture2D" uid="uid://ostel234vg2s" path="res://Pictures/space-background.jpg" id="1_psbsm"]
-[ext_resource type="Script" uid="uid://sbatq4fc4xjv" path="res://Scenes/minigame_2.gd" id="1_wu6l1"]
+[ext_resource type="Script" uid="uid://sbatq4fc4xjv" path="res://Script/minigame_2.gd" id="1_wu6l1"]
 [ext_resource type="Texture2D" uid="uid://pfit4w74ucvs" path="res://Pictures/stardust.png" id="2_dfb65"]
-[ext_resource type="Script" uid="uid://dvkap0e6mm2s" path="res://Scenes/button_1.gd" id="3_rfxq2"]
+[ext_resource type="Script" uid="uid://dvkap0e6mm2s" path="res://Script/button_1.gd" id="3_rfxq2"]
 [ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="4_mmgun"]
-[ext_resource type="Script" uid="uid://bo41hn42lku1v" path="res://Scenes/button_2.gd" id="4_rfxq2"]
-[ext_resource type="Script" uid="uid://bq5d22sm4mctn" path="res://Scenes/button_3.gd" id="5_mmgun"]
-[ext_resource type="Script" uid="uid://cq4cnhgf65v7v" path="res://Scenes/button_4.gd" id="6_h684j"]
+[ext_resource type="Script" uid="uid://bo41hn42lku1v" path="res://Script/button_2.gd" id="4_rfxq2"]
+[ext_resource type="Script" uid="uid://bq5d22sm4mctn" path="res://Script/button_3.gd" id="5_mmgun"]
+[ext_resource type="Script" uid="uid://cq4cnhgf65v7v" path="res://Script/button_4.gd" id="6_h684j"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wu6l1"]
 load_path = "res://.godot/imported/stardust.png-f04a1f3bac265ea8787dc0045910cf72.ctex"
@@ -51,6 +51,7 @@ offset_left = 369.0
 offset_top = 394.0
 offset_right = 491.0
 offset_bottom = 521.0
+action_mode = 0
 texture_normal = ExtResource("2_dfb65")
 script = ExtResource("6_h684j")
 

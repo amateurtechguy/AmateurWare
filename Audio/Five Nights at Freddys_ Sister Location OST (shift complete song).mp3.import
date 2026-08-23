@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckhr52wogorcb"
+path="res://.godot/imported/Five Nights at Freddys_ Sister Location OST (shift complete song).mp3-08bcfa0cc9078552c26bc35dee51f46b.mp3str"
+
+[deps]
+
+source_file="res://Audio/Five Nights at Freddys_ Sister Location OST (shift complete song).mp3"
+dest_files=["res://.godot/imported/Five Nights at Freddys_ Sister Location OST (shift complete song).mp3-08bcfa0cc9078552c26bc35dee51f46b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
