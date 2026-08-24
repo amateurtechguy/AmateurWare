@@ -11,6 +11,14 @@ extends Node2D
 
 var time
 
+
+# List of minigames that currently exist
+var available_minigames := [
+	"res://Scenes/minigame_1.tscn",
+	"res://Scenes/minigame_2.tscn"
+]
+
+
 func _ready() -> void:
 	if Global.lives <= 0:
 		get_tree().change_scene_to_file("res://Scenes/lose_screen.tscn")
@@ -21,10 +29,11 @@ func _ready() -> void:
 	# If you haven't completed 3 minigames yet
 	if Global.minigames_done < 3:
 		Global.minigames_done += 1
-		
-		get_tree().change_scene_to_file(
-			"res://Scenes/minigame_" + str(Global.minigames_done) + ".tscn"
-		)
+
+		# Pick a random minigame
+		var random_minigame = available_minigames.pick_random()
+
+		get_tree().change_scene_to_file(random_minigame)
 
 	else:
 		get_tree().change_scene_to_file("res://Scenes/node_2d.tscn")
@@ -39,7 +48,6 @@ func _process(_delta: float) -> void:
 
 	match Global.lives:
 		5:
-			# All 5 garlics visible
 			pass
 
 		4:
@@ -72,11 +80,8 @@ func Timer(start_time: float) -> void:
 
 	while time > 0.0:
 		await wait(0.1)
-		time -= 0.1
-
-	return
+		time = max(time - 0.1, 0.0)
 
 
 func wait(seconds: float) -> void:
 	await get_tree().create_timer(seconds).timeout
- 

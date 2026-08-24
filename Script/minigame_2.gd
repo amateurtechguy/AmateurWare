@@ -30,8 +30,11 @@ func _ready() -> void:
 	# Start the timer
 	await themed_timer.Timer(7.0)
 
+	# If the player hasn't collected 4 potions, they lose
 	if buttons_pressed < 4:
-		timer_end = true
+		Global.lives -= 1
+		Global.minigames_done -= 1
+		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 
 
 func show_random_button() -> void:
@@ -57,7 +60,7 @@ func _process(_delta: float) -> void:
 
 	# WIN
 	if buttons_pressed >= 4:
-		if Global.minigames_done > 3:
+		if Global.minigames_done >= 3:
 			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")

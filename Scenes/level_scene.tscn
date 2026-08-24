@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://baut0our0m614"]
 
-[ext_resource type="Script" uid="uid://cs6op158aqdwu" path="res://Scenes/Timer_screen.gd" id="1_2fcgv"]
+[ext_resource type="Script" uid="uid://cs6op158aqdwu" path="res://Script/Timer_screen.gd" id="1_2fcgv"]
 [ext_resource type="Texture2D" uid="uid://7ic6rnvyishd" path="res://Pictures/Screenshot 2026-08-21 173720.png" id="2_2fcgv"]
 [ext_resource type="Texture2D" uid="uid://bnrvnewg4vq0o" path="res://Pictures/heart.png" id="2_cn3xy"]
 [ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="3_2fcgv"]
