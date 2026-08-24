@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c7uljq28hkw7f"]
+
+[ext_resource type="Script" uid="uid://uck7u8mwudm3" path="res://Script/music_manager.gd" id="1_hsxb6"]
+[ext_resource type="AudioStream" uid="uid://d4i7kpd0cukvk" path="res://Audio/FNaF World OST - Title Screen Theme.mp3" id="2_sdmu8"]
+
+[node name="MusicManager" type="Node2D" unique_id=404334790]
+script = ExtResource("1_hsxb6")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=628959130]
+stream = ExtResource("2_sdmu8")
+autoplay = true
+parameters/looping = true

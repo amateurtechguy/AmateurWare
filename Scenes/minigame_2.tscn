@@ -1,63 +1,113 @@
 [gd_scene format=3 uid="uid://ci4wh75dswh7u"]
 
-[ext_resource type="Texture2D" uid="uid://ostel234vg2s" path="res://Pictures/space-background.jpg" id="1_psbsm"]
-[ext_resource type="Script" uid="uid://sbatq4fc4xjv" path="res://Script/minigame_2.gd" id="1_wu6l1"]
-[ext_resource type="Texture2D" uid="uid://pfit4w74ucvs" path="res://Pictures/stardust.png" id="2_dfb65"]
-[ext_resource type="Script" uid="uid://dvkap0e6mm2s" path="res://Script/button_1.gd" id="3_rfxq2"]
-[ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="4_mmgun"]
-[ext_resource type="Script" uid="uid://bo41hn42lku1v" path="res://Script/button_2.gd" id="4_rfxq2"]
-[ext_resource type="Script" uid="uid://bq5d22sm4mctn" path="res://Script/button_3.gd" id="5_mmgun"]
-[ext_resource type="Script" uid="uid://cq4cnhgf65v7v" path="res://Script/button_4.gd" id="6_h684j"]
+[ext_resource type="Script" uid="uid://sbatq4fc4xjv" path="res://Script/minigame_2.gd" id="1_l4g8r"]
+[ext_resource type="Texture2D" uid="uid://ostel234vg2s" path="res://Pictures/space-background.jpg" id="2_dfb65"]
+[ext_resource type="Texture2D" uid="uid://pfit4w74ucvs" path="res://Pictures/stardust.png" id="3_dfb65"]
+[ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="3_rfxq2"]
+[ext_resource type="AudioStream" uid="uid://274t5gcdj1hy" path="res://Audio/collected item.wav" id="4_mmgun"]
+[ext_resource type="AudioStream" uid="uid://d0k237nsr5avl" path="res://Audio/FNAF World - Scott Cawthon boss battle theme.mp3" id="6_h684j"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wu6l1"]
-load_path = "res://.godot/imported/stardust.png-f04a1f3bac265ea8787dc0045910cf72.ctex"
+[node name="minigame_2" type="Node2D" unique_id=2012279874]
+script = ExtResource("1_l4g8r")
 
-[node name="minigame_2" type="Node2D" unique_id=1469917394]
-script = ExtResource("1_wu6l1")
-
-[node name="Background" type="TextureRect" parent="." unique_id=1170002212]
-offset_right = 1167.0
-offset_bottom = 652.0
-texture = ExtResource("1_psbsm")
+[node name="TextureRect" type="TextureRect" parent="." unique_id=97863513]
+offset_right = 1194.0
+offset_bottom = 668.0
+texture = ExtResource("2_dfb65")
 expand_mode = 1
 
-[node name="Button_1" type="TextureButton" parent="." unique_id=122592671]
-offset_left = 192.33174
-offset_top = 217.28308
-offset_right = 232.33174
-offset_bottom = 257.28308
-action_mode = 0
-texture_normal = SubResource("CompressedTexture2D_wu6l1")
-script = ExtResource("3_rfxq2")
+[node name="Button_1" type="TextureButton" parent="." unique_id=589950185]
+offset_left = 142.0
+offset_top = 170.0
+offset_right = 264.0
+offset_bottom = 297.0
+texture_normal = ExtResource("3_dfb65")
 
-[node name="Button_2" type="TextureButton" parent="." unique_id=1094280229]
-offset_left = 750.0
-offset_top = 360.0
-offset_right = 872.0
-offset_bottom = 487.0
-texture_normal = ExtResource("2_dfb65")
-script = ExtResource("4_rfxq2")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button_1" unique_id=1022578054]
+stream = ExtResource("4_mmgun")
 
-[node name="Button_3" type="TextureButton" parent="." unique_id=1757265678]
-offset_left = 510.0
-offset_top = 164.0
-offset_right = 632.0
-offset_bottom = 291.0
-texture_normal = ExtResource("2_dfb65")
-script = ExtResource("5_mmgun")
+[node name="Button_2" type="TextureButton" parent="." unique_id=632918992]
+offset_left = 66.0
+offset_top = 473.0
+offset_right = 188.0
+offset_bottom = 600.0
+texture_normal = ExtResource("3_dfb65")
 
-[node name="Button_4" type="TextureButton" parent="." unique_id=2042054849]
-offset_left = 369.0
-offset_top = 394.0
-offset_right = 491.0
-offset_bottom = 521.0
-action_mode = 0
-texture_normal = ExtResource("2_dfb65")
-script = ExtResource("6_h684j")
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button_2" unique_id=500613797]
+stream = ExtResource("4_mmgun")
 
-[node name="ThemedTimer" parent="." unique_id=1082965783 instance=ExtResource("4_mmgun")]
+[node name="Button_3" type="TextureButton" parent="." unique_id=1838186019]
+offset_left = 903.0
+offset_top = 372.0
+offset_right = 1025.0
+offset_bottom = 499.0
+texture_normal = ExtResource("3_dfb65")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button_3" unique_id=1850948996]
+stream = ExtResource("4_mmgun")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=2035724774]
+offset_left = 373.0
+offset_top = 282.0
+offset_right = 495.0
+offset_bottom = 409.0
+texture_normal = ExtResource("3_dfb65")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button_4" unique_id=143566869]
+stream = ExtResource("4_mmgun")
+
+[node name="Button_5" type="TextureButton" parent="." unique_id=709468082]
+offset_left = 667.0
+offset_top = 440.0
+offset_right = 789.0
+offset_bottom = 567.0
+texture_normal = ExtResource("3_dfb65")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button_5" unique_id=1699367239]
+stream = ExtResource("4_mmgun")
+
+[node name="Button_6" type="TextureButton" parent="." unique_id=743823361]
+offset_left = 703.0
+offset_top = 199.0
+offset_right = 825.0
+offset_bottom = 326.0
+texture_normal = ExtResource("3_dfb65")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button_6" unique_id=191362188]
+stream = ExtResource("4_mmgun")
+
+[node name="Button_7" type="TextureButton" parent="." unique_id=1235180289]
+offset_left = 469.0
+offset_top = 104.0
+offset_right = 591.0
+offset_bottom = 231.0
+texture_normal = ExtResource("3_dfb65")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button_7" unique_id=1686454802]
+stream = ExtResource("4_mmgun")
+
+[node name="Button_8" type="TextureButton" parent="." unique_id=434578174]
+offset_left = 919.0
+offset_top = 113.0
+offset_right = 1041.0
+offset_bottom = 240.0
+texture_normal = ExtResource("3_dfb65")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Button_8" unique_id=1690368126]
+stream = ExtResource("4_mmgun")
+
+[node name="ThemedTimer" parent="." unique_id=1082965783 instance=ExtResource("3_rfxq2")]
+position = Vector2(0, 7)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=447140085]
+stream = ExtResource("6_h684j")
+autoplay = true
 
 [connection signal="pressed" from="Button_1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button_2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button_3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button_4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button_5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button_6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Button_7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Button_8" to="." method="_on_button_8_pressed"]
