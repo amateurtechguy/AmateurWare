@@ -14,7 +14,7 @@ A WarioWare styled pixel game where your main goal is to get through levels as f
   
 ## Features:
 
-- 3 unique minigames
+- 2 unique minigames
 - Special win and lose screens
 - Custom pixel assets and sprites
 - Custom animations
