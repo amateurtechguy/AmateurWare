@@ -7,11 +7,8 @@ A WarioWare styled pixel game where your main goal is to get through levels as f
 
 ## How does it work?
 
-- You simply just click [here](https://amateurtechguy.itch.io/amateurware)
-- Install the game
-- Unzip it
-- Run it!
-  
+ You simply just click [here](https://amateurtechguy.itch.io/amateurware), wait for the game to load and then you can play it!
+
 ## Features:
 
 - 2 unique minigames
