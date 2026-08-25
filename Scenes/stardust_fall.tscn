@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bevo7ee1270s3"]
+
+[ext_resource type="Script" uid="uid://g7kbndpsa6d" path="res://Script/stardust_fall.gd" id="1_eork0"]
+[ext_resource type="Texture2D" uid="uid://pfit4w74ucvs" path="res://Pictures/stardust.png" id="2_po472"]
+[ext_resource type="AudioStream" uid="uid://bbjj26j10hgwq" path="res://Audio/not delayed item sound.wav" id="3_aru6s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x3xjb"]
+radius = 48.923653
+
+[node name="Stardust_fall" type="Area2D" unique_id=1936978210]
+script = ExtResource("1_eork0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1145796912]
+position = Vector2(872.3949, 93.135025)
+scale = Vector2(0.8131984, 0.8325193)
+texture = ExtResource("2_po472")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1686579567]
+position = Vector2(874, 97)
+scale = Vector2(0.8131984, 0.8325193)
+shape = SubResource("CircleShape2D_x3xjb")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1466844878]
+position = Vector2(878.52954, 90.94507)
+stream = ExtResource("3_aru6s")
+volume_db = 3.791
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

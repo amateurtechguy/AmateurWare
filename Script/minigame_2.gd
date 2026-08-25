@@ -60,7 +60,7 @@ func _process(_delta: float) -> void:
 
 	# WIN
 	if buttons_pressed >= 4:
-		if Global.minigames_done >= 3:
+		if Global.minigames_done >= 6:
 			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")

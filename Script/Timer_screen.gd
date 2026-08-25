@@ -11,11 +11,10 @@ extends Node2D
 
 var time
 
-
-# List of minigames that currently exist
 var available_minigames := [
 	"res://Scenes/minigame_1.tscn",
-	"res://Scenes/minigame_2.tscn"
+	"res://Scenes/minigame_2.tscn",
+	"res://Scenes/minigame_3.tscn"
 ]
 
 
@@ -26,12 +25,21 @@ func _ready() -> void:
 
 	await Timer(3.0)
 
-	# If you haven't completed 3 minigames yet
-	if Global.minigames_done < 3:
+	if Global.minigames_done < 6:
 		Global.minigames_done += 1
 
-		# Pick a random minigame
-		var random_minigame = available_minigames.pick_random()
+		var possible_minigames = available_minigames.duplicate()
+
+		if Global.last_minigame == "res://Scenes/minigame_1.tscn":
+			possible_minigames.erase("res://Scenes/minigame_1.tscn")
+		elif Global.last_minigame == "res://Scenes/minigame_2.tscn":
+			possible_minigames.erase("res://Scenes/minigame_2.tscn")
+		elif Global.last_minigame == "res://Scenes/minigame_3.tscn":
+			possible_minigames.erase("res://Scenes/minigame_3.tscn")
+
+		var random_minigame = possible_minigames.pick_random()
+
+		Global.last_minigame = random_minigame
 
 		get_tree().change_scene_to_file(random_minigame)
 
@@ -40,8 +48,6 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-
-	# Check for losing all lives
 	if Global.lives <= 0:
 		get_tree().change_scene_to_file("res://Scenes/lose_screen.tscn")
 		return
