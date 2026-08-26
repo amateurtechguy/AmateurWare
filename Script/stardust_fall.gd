@@ -8,4 +8,5 @@ func _process(delta):
 func _on_body_entered(body) -> void:
 	if body.name == "Player":
 		get_parent().stardust_collect()
+		$AudioStreamPlayer2D.play()
 		queue_free()

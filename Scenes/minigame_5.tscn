@@ -1,6 +1,28 @@
 [gd_scene format=3 uid="uid://cn7df0qsat6nr"]
 
 [ext_resource type="Script" uid="uid://tt3bdypfki3" path="res://Script/minigame_5.gd" id="1_rngjv"]
+[ext_resource type="Texture2D" uid="uid://d2kh44tpninux" path="res://Pictures/farm background.png" id="2_28s5m"]
+[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="3_ofli8"]
+[ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="4_kpx3j"]
 
 [node name="minigame_5" type="Node2D" unique_id=1781141727]
 script = ExtResource("1_rngjv")
+
+[node name="Background" type="TextureRect" parent="." unique_id=251074825]
+offset_right = 1159.0
+offset_bottom = 666.0
+texture = ExtResource("2_28s5m")
+
+[node name="Label" type="Label" parent="Background" unique_id=746929909]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 61.0
+offset_right = 882.0
+offset_bottom = 146.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_ofli8")
+theme_override_font_sizes/font_size = 60
+text = " HATCH THE EGG"
+
+[node name="ThemedTimer" parent="." unique_id=1082965783 instance=ExtResource("4_kpx3j")]
+position = Vector2(32, 27)
