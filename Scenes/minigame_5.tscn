@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cn7df0qsat6nr"]
+
+[ext_resource type="Script" uid="uid://tt3bdypfki3" path="res://Script/minigame_5.gd" id="1_rngjv"]
+
+[node name="minigame_5" type="Node2D" unique_id=1781141727]
+script = ExtResource("1_rngjv")

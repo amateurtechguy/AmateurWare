@@ -14,7 +14,8 @@ var time
 var available_minigames := [
 	"res://Scenes/minigame_1.tscn",
 	"res://Scenes/minigame_2.tscn",
-	"res://Scenes/minigame_3.tscn"
+	"res://Scenes/minigame_3.tscn",
+	"res://Scenes/minigame_4.tscn"
 ]
 
 

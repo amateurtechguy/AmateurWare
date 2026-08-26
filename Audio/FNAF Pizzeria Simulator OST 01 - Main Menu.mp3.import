@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3jkvfcl1dfqc"
+path="res://.godot/imported/FNAF Pizzeria Simulator OST 01 - Main Menu.mp3-513c6e7f7c2a33e3f9fb52a07fcd0ea6.mp3str"
+
+[deps]
+
+source_file="res://Audio/FNAF Pizzeria Simulator OST 01 - Main Menu.mp3"
+dest_files=["res://.godot/imported/FNAF Pizzeria Simulator OST 01 - Main Menu.mp3-513c6e7f7c2a33e3f9fb52a07fcd0ea6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

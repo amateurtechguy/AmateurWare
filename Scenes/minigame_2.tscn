@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://sbatq4fc4xjv" path="res://Script/minigame_2.gd" id="1_l4g8r"]
 [ext_resource type="Texture2D" uid="uid://ostel234vg2s" path="res://Pictures/space-background.jpg" id="2_dfb65"]
 [ext_resource type="Texture2D" uid="uid://pfit4w74ucvs" path="res://Pictures/stardust.png" id="3_dfb65"]
+[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="3_h684j"]
 [ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="3_rfxq2"]
 [ext_resource type="AudioStream" uid="uid://274t5gcdj1hy" path="res://Audio/collected item.wav" id="4_mmgun"]
 [ext_resource type="AudioStream" uid="uid://d0k237nsr5avl" path="res://Audio/FNAF World - Scott Cawthon boss battle theme.mp3" id="6_h684j"]
@@ -15,6 +16,17 @@ offset_right = 1194.0
 offset_bottom = 668.0
 texture = ExtResource("2_dfb65")
 expand_mode = 1
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=936018682]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 25.0
+offset_right = 904.0
+offset_bottom = 110.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_h684j")
+theme_override_font_sizes/font_size = 60
+text = "COLLECT 4 STARDUST"
 
 [node name="Button_1" type="TextureButton" parent="." unique_id=589950185]
 offset_left = 142.0
@@ -97,9 +109,10 @@ texture_normal = ExtResource("3_dfb65")
 stream = ExtResource("4_mmgun")
 
 [node name="ThemedTimer" parent="." unique_id=1082965783 instance=ExtResource("3_rfxq2")]
-position = Vector2(0, 7)
+position = Vector2(14, 10)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=447140085]
+position = Vector2(-55, 82)
 stream = ExtResource("6_h684j")
 autoplay = true
 

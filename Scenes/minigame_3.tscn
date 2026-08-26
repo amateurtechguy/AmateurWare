@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://beboyb54qi3rx" path="res://Script/minigame_3.gd" id="1_asmx3"]
 [ext_resource type="Texture2D" uid="uid://byqeefd5nx16n" path="res://Pictures/Free-Nature-Backgrounds-Pixel-Art5.png" id="2_4cfv6"]
 [ext_resource type="Texture2D" uid="uid://br35qju8h4fwr" path="res://Pictures/1000_F_763711797_jEzIq46dVANc3pwMErZzVMIlNENzfiP9.jpg" id="3_mu65p"]
+[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="3_y6mal"]
 [ext_resource type="AudioStream" uid="uid://c6irhnef76m42" path="res://Audio/gameplay music.mp3" id="4_s0j2t"]
 [ext_resource type="PackedScene" uid="uid://cuu1ly8wt3hc2" path="res://Scenes/player.tscn" id="5_5plo5"]
 [ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="6_1kvof"]
@@ -27,6 +28,17 @@ offset_right = 1324.0
 offset_bottom = 777.0
 texture = ExtResource("2_4cfv6")
 expand_mode = 1
+
+[node name="Label" type="Label" parent="Background" unique_id=565146685]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 286.0
+offset_right = 1009.0
+offset_bottom = 371.00003
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_y6mal")
+theme_override_font_sizes/font_size = 60
+text = "COLLECT 8 STARDUST"
 
 [node name="ground" type="StaticBody2D" parent="." unique_id=1848083212]
 

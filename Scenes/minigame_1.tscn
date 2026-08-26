@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://byqeefd5nx16n" path="res://Pictures/Free-Nature-Backgrounds-Pixel-Art5.png" id="1_enoba"]
 [ext_resource type="Script" uid="uid://djw2jpx82ck3b" path="res://Script/minigame_1.gd" id="1_jmcek"]
 [ext_resource type="AudioStream" uid="uid://c6irhnef76m42" path="res://Audio/gameplay music.mp3" id="2_11mgy"]
+[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="3_btwg3"]
 [ext_resource type="PackedScene" uid="uid://cuu1ly8wt3hc2" path="res://Scenes/player.tscn" id="3_f6tb2"]
 [ext_resource type="Texture2D" uid="uid://br35qju8h4fwr" path="res://Pictures/1000_F_763711797_jEzIq46dVANc3pwMErZzVMIlNENzfiP9.jpg" id="3_vj06g"]
 [ext_resource type="Script" uid="uid://cpsntwc4xw54g" path="res://Script/stardust.gd" id="4_5txvl"]
@@ -153,6 +154,17 @@ offset_right = 1208.0
 offset_bottom = 699.0
 texture = ExtResource("1_enoba")
 expand_mode = 1
+
+[node name="Label" type="Label" parent="Background" unique_id=1108741470]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 137.0
+offset_right = 884.0
+offset_bottom = 222.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_btwg3")
+theme_override_font_sizes/font_size = 60
+text = "GRAB ALL 3 STARDUST"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=253627437]
 
@@ -339,6 +351,7 @@ stream = ExtResource("9_o14ck")
 volume_db = 3.791
 
 [node name="ThemedTimer" parent="." unique_id=1082965783 instance=ExtResource("9_ne1wf")]
+position = Vector2(18, 16)
 
 [connection signal="garlic_collected" from="Stardust" to="." method="_on_stardust_garlic_collected"]
 [connection signal="garlic_collected" from="Stardust2" to="." method="_on_stardust_2_garlic_collected"]

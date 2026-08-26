@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://g6deeh4r347y"]
+
+[ext_resource type="Script" uid="uid://bnjwvaoxnvq1f" path="res://Script/minigame_4.gd" id="1_4ashd"]
+[ext_resource type="Texture2D" uid="uid://bkscs7heu3672" path="res://Pictures/neon arcade.webp" id="2_e1srr"]
+[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="3_lrixb"]
+[ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="4_xea2i"]
+[ext_resource type="AudioStream" uid="uid://dvwfpuq65mwkx" path="res://Audio/sound effect needle.wav" id="5_xea2i"]
+[ext_resource type="AudioStream" uid="uid://3jkvfcl1dfqc" path="res://Audio/FNAF Pizzeria Simulator OST 01 - Main Menu.mp3" id="6_ake4f"]
+
+[node name="minigame_4" type="Node2D" unique_id=739342269]
+script = ExtResource("1_4ashd")
+
+[node name="background" type="TextureRect" parent="." unique_id=1303709404]
+offset_right = 1156.0
+offset_bottom = 673.0
+texture = ExtResource("2_e1srr")
+
+[node name="Label" type="Label" parent="background" unique_id=243284199]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 113.0
+offset_right = 894.0
+offset_bottom = 198.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_lrixb")
+theme_override_font_sizes/font_size = 60
+text = "STOP THE NEEDLE!!"
+
+[node name="Bar" type="ColorRect" parent="." unique_id=945612544]
+offset_left = 235.0
+offset_top = 276.0
+offset_right = 946.0
+offset_bottom = 311.0
+color = Color(0.77348644, 0, 0.10884292, 1)
+
+[node name="TargetZone" type="ColorRect" parent="Bar" unique_id=1190630070]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.46800002
+anchor_right = 0.46800002
+offset_left = 3.2519836
+offset_right = 75.29996
+offset_bottom = 35.0
+grow_horizontal = 2
+color = Color(0.29803923, 0.6862745, 0.3137255, 1)
+
+[node name="Needle" type="ColorRect" parent="Bar" unique_id=1389948027]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.523
+anchor_top = 3.0860002
+anchor_right = 0.523
+anchor_bottom = 3.0860002
+offset_left = 0.14700317
+offset_top = -0.010009766
+offset_right = 6.571991
+offset_bottom = 44.98999
+
+[node name="Polygon2D" type="Polygon2D" parent="Bar/Needle" unique_id=759105919]
+polygon = PackedVector2Array(0, 0, 6, 0, 3, -11)
+
+[node name="ThemedTimer" parent="." unique_id=1082965783 instance=ExtResource("4_xea2i")]
+position = Vector2(31.5, 27.999992)
+
+[node name="NeedleSound" type="AudioStreamPlayer2D" parent="." unique_id=596242006]
+stream = ExtResource("5_xea2i")
+
+[node name="OST" type="AudioStreamPlayer2D" parent="." unique_id=289100527]
+stream = ExtResource("6_ake4f")
+autoplay = true
