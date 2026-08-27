@@ -111,6 +111,7 @@ position = Vector2(19.169998, 17.310417)
 [node name="Stardust_fall" parent="." unique_id=1936978210 instance=ExtResource("7_rpf30")]
 position = Vector2(-445.00003, -149)
 
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="Stardust_fall" unique_id=1321404137]
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="." unique_id=1321404137]
+position = Vector2(-445.00003, -149)
 stream = ExtResource("9_4cfv6")
 volume_db = 3.791

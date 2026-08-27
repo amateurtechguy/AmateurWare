@@ -2,6 +2,8 @@ extends Node2D
 
 var stardust_scene = preload("res://Scenes/stardust_fall.tscn")
 @onready var themed_timer: Node2D = $ThemedTimer 
+@onready var collect_sound: AudioStreamPlayer2D = $CollectSound
+
 # ^^^ You dragged this in the scene by the way 
 
 
@@ -21,7 +23,6 @@ func spawn_stardust() -> void:
 
 func stardust_spawner() -> void:
 	while not timer_end:
-		print("SPAWNING STARDUST")
 		spawn_stardust()
 		await get_tree().create_timer(1.0).timeout
 
@@ -55,5 +56,5 @@ func _process(_delta: float) -> void: # running every frame brochacho
 
 func stardust_collect() -> void: # cool function that you connect to those stardust
 	stardust_collected = stardust_collected + 1
-	print("Stardust collected: ", stardust_collected)
+	collect_sound.play()
 	return

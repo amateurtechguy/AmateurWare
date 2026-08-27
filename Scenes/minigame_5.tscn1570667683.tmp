@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="4_kpx3j"]
 [ext_resource type="Texture2D" uid="uid://dxiv0ucar7gso" path="res://Pictures/egg.png" id="4_ykq01"]
 [ext_resource type="Texture2D" uid="uid://cbhwpli834at0" path="res://Pictures/hatched.png" id="5_5l52r"]
-[ext_resource type="AudioStream" uid="uid://dhwfmv5ly3aba" path="res://Audio/Wood Crack 02 Sound Effect.wav" id="7_5l52r"]
 [ext_resource type="AudioStream" uid="uid://wn3sagfphht8" path="res://Audio/yay win sound.wav" id="7_ykq01"]
 
 [node name="minigame_5" type="Node2D" unique_id=1781141727]
@@ -54,14 +53,13 @@ offset_bottom = 640.0
 theme_override_constants/outline_size = 20
 theme_override_fonts/font = ExtResource("3_ofli8")
 theme_override_font_sizes/font_size = 60
-text = "0 / 20"
+text = "0 / 30"
 horizontal_alignment = 1
 
 [node name="ThemedTimer" parent="." unique_id=1082965783 instance=ExtResource("4_kpx3j")]
 position = Vector2(35, 39)
 
 [node name="MashSound" type="AudioStreamPlayer2D" parent="." unique_id=1318641181]
-stream = ExtResource("7_5l52r")
 
 [node name="HashSound" type="AudioStreamPlayer2D" parent="." unique_id=1159860481]
 stream = ExtResource("7_ykq01")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dhwfmv5ly3aba"
+path="res://.godot/imported/Wood Crack 02 Sound Effect.wav-12114dada9ef2471f09609eff2d6e325.sample"
+
+[deps]
+
+source_file="res://Audio/Wood Crack 02 Sound Effect.wav"
+dest_files=["res://.godot/imported/Wood Crack 02 Sound Effect.wav-12114dada9ef2471f09609eff2d6e325.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

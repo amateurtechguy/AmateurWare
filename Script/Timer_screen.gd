@@ -15,7 +15,9 @@ var available_minigames := [
 	"res://Scenes/minigame_1.tscn",
 	"res://Scenes/minigame_2.tscn",
 	"res://Scenes/minigame_3.tscn",
-	"res://Scenes/minigame_4.tscn"
+	"res://Scenes/minigame_4.tscn",
+	"res://Scenes/minigame_5.tscn",
+	"res://Scenes/minigame_6.tscn"
 ]
 
 
@@ -37,6 +39,12 @@ func _ready() -> void:
 			possible_minigames.erase("res://Scenes/minigame_2.tscn")
 		elif Global.last_minigame == "res://Scenes/minigame_3.tscn":
 			possible_minigames.erase("res://Scenes/minigame_3.tscn")
+		elif Global.last_minigame == "res://Scenes/minigame_4.tscn":
+			possible_minigames.erase("res://Scenes/minigame_4.tscn")
+		elif Global.last_minigame == "res://Scenes/minigame_5.tscn":
+			possible_minigames.erase("res://Scenes/minigame_5.tscn")
+		elif Global.last_minigame == "res://Scenes/minigame_6.tscn":
+			possible_minigames.erase("res://Scenes/minigame_6.tscn")
 
 		var random_minigame = possible_minigames.pick_random()
 

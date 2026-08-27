@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bfkyl1oh0o2w0"]
+
+[ext_resource type="Script" uid="uid://vboe6g51ugon" path="res://Script/minigame_6.gd" id="1_5ba1k"]
+[ext_resource type="Texture2D" uid="uid://cxmgpdiwclxrh" path="res://Pictures/sunset background.jpeg" id="2_8u25l"]
+[ext_resource type="PackedScene" uid="uid://i002358fcf1s" path="res://Scenes/timer.tscn" id="2_xojoc"]
+[ext_resource type="FontFile" uid="uid://bklxvrj84djao" path="res://Fonts/Geist_Pixel/GeistPixel-Regular-VariableFont_ELSH.ttf" id="3_xuuwq"]
+[ext_resource type="Texture2D" uid="uid://c7qrqh3fiebru" path="res://Pictures/red-shaded-circle-removebg-preview.png" id="5_35vpf"]
+[ext_resource type="AudioStream" uid="uid://d0k237nsr5avl" path="res://Audio/FNAF World - Scott Cawthon boss battle theme.mp3" id="6_xuuwq"]
+
+[node name="minigame_6" type="Node2D" unique_id=572447770]
+script = ExtResource("1_5ba1k")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2138336232]
+offset_right = 1161.0
+offset_bottom = 652.0
+mouse_filter = 2
+texture = ExtResource("2_8u25l")
+
+[node name="Label" type="Label" parent="Background" unique_id=1057071884]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 61.0
+offset_right = 882.0
+offset_bottom = 146.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_xuuwq")
+theme_override_font_sizes/font_size = 60
+text = " CLICK THE TARGET"
+
+[node name="ThemedTimer" parent="." unique_id=1082965783 instance=ExtResource("2_xojoc")]
+position = Vector2(32, 34)
+
+[node name="Target" type="TextureButton" parent="." unique_id=1979520366]
+offset_left = 111.0
+offset_top = 214.0
+offset_right = 311.0
+offset_bottom = 414.0
+texture_normal = ExtResource("5_35vpf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TargetTimer" type="Timer" parent="." unique_id=1448881547]
+wait_time = 0.7
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=706756849]
+position = Vector2(-55, 82)
+stream = ExtResource("6_xuuwq")
+autoplay = true
+
+[connection signal="pressed" from="Target" to="." method="_on_target_pressed"]
+[connection signal="timeout" from="TargetTimer" to="." method="_on_target_timer_timeout"]
