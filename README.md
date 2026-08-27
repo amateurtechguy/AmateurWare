@@ -13,7 +13,7 @@ Get through level 5 and win the game!
 
 ## Features:
 
-- 4 unique minigames
+- 6 unique minigames
 - Special win and lose screens
 - Custom pixel assets and sprites
 - Custom animations
