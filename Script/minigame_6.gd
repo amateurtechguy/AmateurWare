@@ -6,6 +6,7 @@ extends Node2D
 
 var target_clicked = false
 var timer_end = false
+var completed = false
 
 
 func _ready() -> void:
@@ -17,27 +18,22 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if target_clicked:
-		if Global.minigames_done >= 6:
-			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
-		else:
-			get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
-
-	if timer_end:
-		Global.minigames_done -= 1
+	if timer_end and not completed:
+		completed = true
 		Global.lives -= 1
 		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 
 
 func _on_target_pressed() -> void:
+	if completed:
+		return
+
 	print("TARGET CLICKED!")
 
-
-	if Global.minigames_done >= 6:
-		get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
-	else:
-		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
-
+	target_clicked = true
+	completed = true
+	Global.score += 1
+	get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 
 
 func _on_target_timer_timeout() -> void:
@@ -51,8 +47,8 @@ func _on_target_timer_timeout() -> void:
 
 func randomize_target() -> void:
 	var viewport_size = get_viewport_rect().size
-	
+
 	var x = randf_range(50, viewport_size.x - 50)
 	var y = randf_range(100, viewport_size.y - 50)
-	
+
 	target.position = Vector2(x, y)

@@ -1,8 +1,11 @@
 extends Node
 
-var minigames_done = 0 
-var lives = 5
-var last_minigame = ""
+var lives := 5
+
+var score := 0
+var minigames_done := 0
+var last_minigame := ""
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

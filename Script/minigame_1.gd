@@ -1,48 +1,40 @@
 extends Node2D
-@onready var themed_timer: Node2D = $ThemedTimer 
-# ^^^ You dragged this in the scene by the way 
 
+@onready var themed_timer: Node2D = $ThemedTimer
 
+var garlic_collected = 0
+var timer_end = false
+var completed = false
 
-var garlic_collected = 0 # just keeping track of garlic collected
-var timer_end = false # boolean (true or false) stating whether the timer ended
 
 func _ready() -> void:
-
-		#Below you can see that I have a function that I named. I grab a 
-		#function from it that was created in it's script and use `await` to 
-		# tell the script to wait for a signal, or for when a function finshes
+	await themed_timer.Timer(10.0)
+	timer_end = true
 
 
-	await themed_timer.Timer(10.0) #accessing a function from this node
-	#after this is compeleted...
-	timer_end = true # now we're saying "oh ye you ran out of time"
+func _process(_delta: float) -> void:
+	if garlic_collected == 3 and not completed:
+		completed = true
+		Global.score += 1
+		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 
-func _process(_delta: float) -> void: # running every frame brochacho
-	if garlic_collected == 3: # the double equals is just an argument asking if it's the same, with "=" it'll give an error
-		if Global.minigames_done >= 6: # we access a global script and see how many minigames have been compeleted
-			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn") # change current play scene into another, but you make your own finish screen in a later challenge, dont worry abt this rn
-		else:
-			get_tree().change_scene_to_file("res://Scenes/level_scene.tscn") # go back to the intermission scene
-	
-	if timer_end: # if the timer does end...
-		Global.minigames_done -=1 #go back a minigame
-		Global.lives -= 1 # lose ur lives
-		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn") # back to intermission
-		
+	if timer_end and not completed:
+		completed = true
+		Global.lives -= 1
+		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 
-func garlic_collect() -> void: # cool function that you connect to those garlics
-	garlic_collected = garlic_collected +1
-	return
+
+func garlic_collect() -> void:
+	garlic_collected += 1
 
 
 func _on_stardust_garlic_collected() -> void:
-	garlic_collect() # Replace with function body.
+	garlic_collect()
 
 
 func _on_stardust_2_garlic_collected() -> void:
-	garlic_collect() # Replace with function body.
+	garlic_collect()
 
 
 func _on_stardust_3_garlic_collected() -> void:
-	garlic_collect() # Replace with function body.
+	garlic_collect()

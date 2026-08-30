@@ -4,6 +4,7 @@ extends Node2D
 
 var buttons_pressed := 0
 var timer_end := false
+var completed := false
 
 @onready var buttons = [
 	$Button_1,
@@ -20,20 +21,16 @@ var timer_end := false
 func _ready() -> void:
 	randomize()
 
-	# Hide all buttons
 	for button in buttons:
 		button.hide()
 
-	# Show the first random button
 	show_random_button()
 
-	# Start the timer
 	await themed_timer.Timer(7.0)
 
-	# If the player hasn't collected 4 potions, they lose
-	if buttons_pressed < 4:
+	if buttons_pressed < 4 and not completed:
+		completed = true
 		Global.lives -= 1
-		Global.minigames_done -= 1
 		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 
 
@@ -43,7 +40,6 @@ func show_random_button() -> void:
 
 	var button = buttons.pick_random()
 
-	# Pick another button if this one is already visible
 	while button.visible:
 		button = buttons.pick_random()
 
@@ -58,19 +54,9 @@ func show_random_button() -> void:
 func _process(_delta: float) -> void:
 	print("Potions collected: ", buttons_pressed)
 
-	# WIN
-	if buttons_pressed >= 4:
-		if Global.minigames_done >= 6:
-			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
-		else:
-			get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
-
-		return
-
-	# LOSE
-	if timer_end:
-		Global.lives -= 1
-		Global.minigames_done -= 1
+	if buttons_pressed >= 4 and not completed:
+		completed = true
+		Global.score += 1
 		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 
 

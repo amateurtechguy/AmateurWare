@@ -21,7 +21,6 @@ func _ready() -> void:
 	timer_end = true
 
 	if not game_over:
-		Global.minigames_done -= 1
 		Global.lives -= 1
 		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 
@@ -83,11 +82,8 @@ func check_result() -> void:
 	var target_right := target_zone.position.x + target_zone.size.x
 
 	if needle_right >= target_left and needle_left <= target_right:
-		if Global.minigames_done >= 6:
-			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
-		else:
-			get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
+		Global.score += 1
+		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
 	else:
-		Global.minigames_done -= 1
 		Global.lives -= 1
 		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")

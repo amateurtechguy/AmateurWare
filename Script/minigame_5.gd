@@ -12,6 +12,8 @@ var mash_goal = 30
 var timer_end = false
 var egg_hatched = false
 var shaking = false
+var completed = false
+
 
 func _ready() -> void:
 	hatched_egg.hide()
@@ -20,6 +22,7 @@ func _ready() -> void:
 
 	if not egg_hatched:
 		timer_end = true
+
 
 func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_SPACE) and not egg_hatched and not shaking:
@@ -30,10 +33,11 @@ func _process(_delta: float) -> void:
 		timer_end = false
 		await hatch_egg()
 
-	if timer_end and not egg_hatched:
-		Global.minigames_done -= 1
+	if timer_end and not egg_hatched and not completed:
+		completed = true
 		Global.lives -= 1
 		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
+
 
 func mash_egg() -> void:
 	if egg_hatched:
@@ -43,6 +47,7 @@ func mash_egg() -> void:
 	mash_label.text = str(mashes) + " / " + str(mash_goal)
 	mash_sound.play()
 	shake_egg()
+
 
 func shake_egg() -> void:
 	shaking = true
@@ -58,6 +63,7 @@ func shake_egg() -> void:
 
 	shaking = false
 
+
 func hatch_egg() -> void:
 	egg.hide()
 	hatched_egg.show()
@@ -65,7 +71,7 @@ func hatch_egg() -> void:
 
 	await get_tree().create_timer(1.5).timeout
 
-	if Global.minigames_done >= 6:
-		get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
-	else:
+	if not completed:
+		completed = true
+		Global.score += 1
 		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")

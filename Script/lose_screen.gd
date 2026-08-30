@@ -1,15 +1,15 @@
 extends Node2D
 
 
-# Called when the node enters the scene tree for the first time.
+@onready var score_label: RichTextLabel = $RichTextLabel
+
+
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+	score_label.text = "YOU ONLY GOT " + str(Global.score) + " GAMES DONE"
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/node_2d.tscn") # Replace with function body.
+	Global.lives = 5
+	Global.score = 0
+	Global.last_minigame = ""
+	get_tree().change_scene_to_file("res://Scenes/node_2d.tscn")

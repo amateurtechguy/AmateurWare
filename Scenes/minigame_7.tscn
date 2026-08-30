@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bh87wq7yb512e"]
+
+[ext_resource type="Script" uid="uid://ta7gipcv84qk" path="res://Script/minigame_7.gd" id="1_xbsvc"]
+
+[node name="minigame_7" type="Node2D" unique_id=806879743]
+script = ExtResource("1_xbsvc")
+
+[node name="Background" type="TextureButton" parent="." unique_id=630864836]
+offset_right = 40.0
+offset_bottom = 40.0
