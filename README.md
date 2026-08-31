@@ -2,7 +2,7 @@
 
 A WarioWare styled pixel game where your main goal is to get through levels as fast as you could in each minigame!
 
-Get through level 5 and win the game!
+Get through as many minigames as you can, it's a free for all! however if you get under 20 you get the loser page👀
 
 <img width="1145" height="654" alt="Screenshot 2026-08-21 235219" src="https://github.com/user-attachments/assets/c5bf581e-465b-4600-8023-e1a8c9286e05" />
 
@@ -41,6 +41,10 @@ In this minigame, a tiny dinosaur is trapped, he can't be hatched! Click on the 
 In this minigame, there's a red ball that quickly appears and disappears randomly on the screen, click it before the timer ends to win.
 
 <img width="352" height="211" alt="Screenshot 2026-08-27 183226" src="https://github.com/user-attachments/assets/8b0f3e87-9876-4632-8526-97ec8df18102" />
+
+## Minigame 7: 
+
+in progress..
 
 ## How does it work?
 
