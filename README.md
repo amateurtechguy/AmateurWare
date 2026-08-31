@@ -4,7 +4,8 @@ A WarioWare styled pixel game where your main goal is to get through levels as f
 
 Get through as many minigames as you can, it's a free for all! however if you get under 20 you get the loser page👀
 
-<img width="1145" height="654" alt="Screenshot 2026-08-21 235219" src="https://github.com/user-attachments/assets/c5bf581e-465b-4600-8023-e1a8c9286e05" />
+<img width="512" height="287" alt="Screenshot 2026-08-31 192453" src="https://github.com/user-attachments/assets/5a7942d1-1aac-4575-9c72-69c72d5c5917" />
+
 
 ## >> Minigame 1:
 
