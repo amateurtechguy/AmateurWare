@@ -42,9 +42,11 @@ In this minigame, there's a red ball that quickly appears and disappears randoml
 
 <img width="352" height="211" alt="Screenshot 2026-08-27 183226" src="https://github.com/user-attachments/assets/8b0f3e87-9876-4632-8526-97ec8df18102" />
 
-## Minigame 7: 
+## >> Minigame 7: 
 
-in progress..
+In this minigame, theres a target that goes left and right and you have to shoot it before the timer ends by clicking space!(if anyone cares i drew the background)
+
+<img width="510" height="286" alt="Screenshot 2026-08-31 203012" src="https://github.com/user-attachments/assets/cf8e2174-e574-4be0-ad89-3c76bc6674de" />
 
 ## How does it work?
 
